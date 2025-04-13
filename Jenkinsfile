@@ -1,12 +1,12 @@
 pipeline {
     agent any
 
-    stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/your-username/node-docker-app.git'
+                git 'https://github.com/Prathmesh-502/node-docker-app.git'
             }
         }
+
 
         stage('Build Docker Image') {
             steps {
