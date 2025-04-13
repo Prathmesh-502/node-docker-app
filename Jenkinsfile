@@ -18,7 +18,7 @@ pipeline {
 
         stage('Run Docker Container') {
             steps {
-               bat 'docker run -d -p 8082:8083 --name nodejsapp nodeapp:v2'
+               bat 'docker run -d -p 8082:8083 --name nodeapp nodejsapp:v2'
             }
         }
     }
