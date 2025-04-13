@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/Prathmesh-502/node-docker-app.git'
+                git branch: 'main', url: 'https://github.com/Prathmesh-502/node-docker-app.git'
             }
         }
 
