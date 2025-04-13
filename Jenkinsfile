@@ -11,14 +11,14 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    dockerImage = docker.build("nodejsapp:v2")
+                    dockerImage = docker.build("nodeapp:v1")
                 }
             }
         }
 
         stage('Run Docker Container') {
             steps {
-               bat 'docker run -d -p 8082:8083 --name nodeapp nodejsapp:v2'
+               bat 'docker run -d -p 8082:8083 --name nodeapp nodeapp:v1'
             }
         }
     }
